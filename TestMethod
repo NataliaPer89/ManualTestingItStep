@@ -1,0 +1,28 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions 
+import time
+
+test1 = webdriver.Chrome()
+test1.get('https://exe.ua/')
+
+items = ["Ноутбук","Телефон","клавіатура","квадрокоптер","колонка"]
+time.sleep(2)
+print("Test start")
+
+for elem in items:
+    try:
+        time.sleep(0.5)
+        search = test1.find_element(By.XPATH,'//*[@id="search_query"]')
+        search.clear()
+        search.send_keys(elem)
+        search.send_keys(Keys.ENTER)
+        time.sleep(4)
+        test1.get('https://exe.ua/')
+    except Exception as e :
+        print("Error")
+        
+test1.quit()
+print("test1 - finised")
