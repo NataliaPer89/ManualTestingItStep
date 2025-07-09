@@ -54,3 +54,10 @@
 --SELECT COUNT(*) FROM USERS Where Active =false;
 --SELECT COUNT(*) FROM USERS Where Active =true 
 --AND Deleted =true ;
+--ALTER TABLE USERS
+--ADD COLUMN Status_text Text;
+--UPDATE USERS SET Status_text = 'Супер активний' Where id = 1;
+--UPDATE USERS SET Status_text = 'активний' Where id = 2;
+--UPDATE USERS SET Status_text = 'неактивний' Where id = 3;
+--UPDATE USERS SET Status_text = 'Супер активний' Where id = 4;
+--UPDATE USERS SET Status_text = 'активний' Where id = 5;
