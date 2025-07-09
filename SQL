@@ -61,3 +61,7 @@
 --UPDATE USERS SET Status_text = 'неактивний' Where id = 3;
 --UPDATE USERS SET Status_text = 'Супер активний' Where id = 4;
 --UPDATE USERS SET Status_text = 'активний' Where id = 5;
+SELECT USERS.Name , Subscriptions.Plan 
+FROM USERS
+JOIN Subscriptions ON USERS.id = Subscriptions.User_id
+Where Planpate=false and deleted=false;
