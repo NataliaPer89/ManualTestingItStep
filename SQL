@@ -1,0 +1,56 @@
+--CREATE TABLE USERS(
+--id INT,
+--Name varchar,
+--Active bool
+--);
+--INSERT INTO USERS(id,name,Active)
+--VALUES (1,'John',True);
+--INSERT INTO USERS(id,name,Active)
+--VALUES (2,'Viki',False);
+--INSERT INTO USERS(id,name,Active)
+--VALUES (3,'Natali',True);
+--INSERT INTO USERS(id,name,Active)
+--VALUES (4,'Vova',false);
+--INSERT INTO USERS(id,name,Active)
+--VALUES (5,'Lida',True);
+--Select * from USERS;
+--SELECT COUNT(*) FROM USERS Where Active =true;
+--CREATE TABLE Subscriptions(
+--id INT,
+--User_id INT,
+--Plan TEXT,
+--Plan_id BOOL
+--);
+--INSERT INTO Subscriptions(id,User_id,Plan,Plan_id)
+--VALUES 
+--(1, 1, 'Plan1', True),
+--(2, 1, 'Plan2', False),
+--(3, 2, 'Plan1', True),
+--(4, 2, 'Plan2', False),
+--(5, 3, 'Plan1', True),
+--(6, 3, 'Plan2', False),
+--(7, 4, 'Plan1' ,True),
+--(8, 4, 'Plan2', False)
+--; 	
+--SELECT USERS.Name , Subscriptions.Plan 
+--FROM USERS
+--JOIN Subscriptions ON USERS.id = Subscriptions.User_id
+--Where Plan_id=true;
+--ALTER TABLE Subscriptions
+--RENAME 'Plan_id' TO 'Planpate' ;
+--select*
+--From USERS
+--Where id not In(
+--Select User_id from Subscriptions
+--);
+--ALTER TABLE USERS
+--ADD COLUMN Deleted Bool;
+--UPDATE USERS SET Deleted = true Where id = 1;
+--UPDATE USERS SET Deleted = false Where id = 2;
+--UPDATE USERS SET Deleted = true Where id = 3;
+--UPDATE USERS SET Deleted = false Where id = 4;
+--UPDATE USERS SET Deleted = true Where id = 5;
+--SELECT COUNT(*) FROM USERS Where Active =true;
+--SELECT COUNT(*) FROM USERS Where Active =false;
+--SELECT COUNT(*) FROM USERS Where Active =true 
+--AND Deleted =true ;
