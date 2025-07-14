@@ -63,5 +63,57 @@
 --UPDATE USERS SET Status_text = 'активний' Where id = 5;
 SELECT USERS.Name , Subscriptions.Plan 
 FROM USERS
+--CREATE TABLE Users(
+--id int,
+--name text,
+--lastname text,
+--login text,
+--email text,
+--cash int,
+--deleted bool
+--);
+--DROP TABLE Orders;	
+--CREATE TABLE Orders(
+--id int,
+--name TEXT,
+--count int,
+--category text
+--);
+--INSERT INTO Users(id,name,lastname,login,email,cash,deleted)
+--VALUES (1,'John','Due','JDue','jon_due@gmail.com',5000, true);
+--INSERT INTO Users(id,name,lastname,login,email,cash,deleted)
+--VALUES (2,'Lida','Fuery','LFue','lida_fuery@mail.com',3000, true);
+--INSERT INTO Users(id,name,lastname,login,email,cash,deleted)
+--VALUES (3,'Viki','Zap','VZap','viki_zap@gmail.com',8000, false);
+--INSERT INTO Users(id,name,lastname,login,email,cash,deleted)
+--VALUES (4,'Nata','Oil','NOil','nata_oil@mail.com',4000, false);
+--INSERT INTO Users(id,name,lastname,login,email,cash,deleted)
+--VALUES (5,'Oksi','Pere','OPere','oksi_pere@gmail.com',7000, false);
+---INSERT INTO Orders(id,name,count,category)
+--VALUES (1,'Bag',3,'school');
+--INSERT INTO Orders(id,name,count,category)
+--VALUES (2,'Ipad',8,'Tehnik');
+--INSERT INTO Orders(id,name,count,category)
+--VALUES (1,'Plate',11,'kitchen');
+--UPDATE Orders SET id = 3 Where name = 'Plate';      
+--INSERT INTO Orders(id,name,count,category)
+--VALUES (4,'Shampoo',4,'Bathroom');
+--INSERT INTO Orders(id,name,count,category)
+--VALUES (5,'oil',9,'kitchen');
+--SELECT name FROM Users WHERE email like'%gmail.com';
+--SELECT * FROM Users WHERE cash > 5000;
+--INSERT INTO Users(id,name,lastname,login,email,cash,deleted)
+--VALUES (6,'Nika','Fire','NFire','Nika_fire@mail.com',2000, false);
+--DELETE FROM USERS WHERE id = 6;
+--UPDATE Users SET cash = 3500 Where name = 'Lida';
+--INSERT INTO Users(id,name,lastname,login,email,cash,deleted)
+--VALUES (5,'Oksi','Pere','OPere','oksi_pere@gmail.com',7000, false);
+ 
+ 	
+Select * , COUNT(*)
+FROM Users
+GROUP BY email
+HAVING COUNT(*)>1;
+
 JOIN Subscriptions ON USERS.id = Subscriptions.User_id
 Where Planpate=false and deleted=false;
