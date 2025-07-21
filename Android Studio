@@ -1,0 +1,22 @@
+Task	Expected result	Status	Comments	
+Swipe товари	Прогортування товарів	passed		
+Swipe банери	Прогортування банерів	passed		
+Swipe новинки	"Прогортування товарів 
+з категорії новинки"	passed		
+Простий Tap на товар	Відкриття товару	passed		
+LONGTAP на товар	Відкриття товару	Failed	Відкриття прихованого меню, Android version 15.0(v)-Api35	
+Double-tap на товар	Відкриття товару	passed	Виконання дії двічі	
+LONGTAP+focus на товар	Відкриття товару	Failed	Відкриття прихованого меню,Android version 15.0(v)-Api35	
+Простий Tap кнопку купити	Додавання товару у кошик	passed		
+Double-tap кнопку купити	Додавання 1 товару у кошик	Failed	Виконання дії двічі	
+LONGTAP на кнопку купити	Додавання товару у кошик	Failed	Не виконує ніяку дію	
+LONGTAP+focus на кнопку купити	Додавання товару у кошик	Failed	Scroll сторінки	
+Простий Tap меню	Відкриття спливаючого вікна	passed	Відкриття спливаючого вікна	
+Double-tap меню	Відкриття спливаючого вікна	passed	Виконання дії двічі	
+LONGTAP меню	Відкриття спливаючого вікна	Failed	Не виконує ніяку дію	
+LONGTAP+focus меню	Відкриття спливаючого вікна	Failed	Scroll сторінки	
+Zoom на збільшення	Зближення сторінки	passed	Android version 15.0(v)-Api35	
+Zoom на зменшення	Віддалення сторінки	passed	Android version 15.0(v)-Api35	
+Scroll - left 	Відкриття меню	Failed	Перехід на один хід назад	
+Scroll - right	Перегортування між вкладками	Failed	Перехід на один хід назад	
+Scroll_back	Повернення назад	passed	Повернення назад	
